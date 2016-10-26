@@ -24,9 +24,11 @@ router.post('/events/create', eventsController.processCreate);
 
 
 // edit events
-
+router.get('/events/:slug/edit', eventsController.showEdit);
+router.post('/events/:slug', eventsController.processEdit);
 
 // delete events
+router.get('/events/:slug/delete', eventsController.deleteEvent);
 
 
 // show a single event
